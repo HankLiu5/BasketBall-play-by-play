@@ -1,5 +1,7 @@
+# This can show which player try which kind of shots.
+
 def shot
-  puts "Which kind of shot? (2a/3a/2m/3m/lay-a/lay-m/dunk-a/dunk-m)"
+  puts "Which kind of shot? (2a/3a/2m/3m/lay-a/lay-m/dunk-a/dunk-m/and1)"
   type = gets.chomp
   case type
   when "2a"
@@ -18,6 +20,8 @@ def shot
     dunk_a
   when "dunk-m"
     dunk_m
+  when "and1"
+    and1
   end
 end
 
@@ -49,7 +53,6 @@ def dunk_a
   rebound
 end
 
-
 def two_m
   who_did_it
   puts $whose_ball ? "Home player number #{$num} 2 pt shot made, away's ball." \
@@ -77,6 +80,24 @@ def three_a
   : "[Away] player number #{$num} 3 pt shot missed, rebound."
   rebound
 end
+
+def and1
+  who_did_it
+  puts "(2pt/3pt)?"
+  ans = gets.chomp
+  if ans == "2pt"
+    puts $whose_ball "Home player number #{$num} 2 pt shot made, and get the foul" \
+    : "Away player number #{$num} 2 pt shot made, and get the foul."
+    foul
+  elsif ans == "3pt"
+    puts $whose_ball "Home player number #{$num} 3 pt shot made, and get the foul" \
+    : "Away player number #{$num} 3 pt shot made, and get the foul."
+    foul
+  else
+    puts "try again."
+  end
+end
+
 
 def rebound
   puts "Which team grab the rebound? (h/a)"

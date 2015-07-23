@@ -1,3 +1,7 @@
+# This is about all possible fouls on the court,
+# including defense, offense, double, flagrent and technical foul.
+# This can determine what situation will be coming after the called foul.
+
 def foul
   puts "Which kind of foul? (def/off/double/flag/tech)"
   type = gets.chomp

@@ -1,3 +1,7 @@
+# Here I stored some short but also necessary functions,
+# including dead_ball, change_ball, rebound_decide, who_did_it, timeout, steal
+# and turnover.
+
 def dead_ball
   puts "(time/sub/no)?"
   ans = gets.chomp

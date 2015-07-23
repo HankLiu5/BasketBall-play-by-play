@@ -1,3 +1,6 @@
+# These codes is to generate some simple and repeating text about almost situation
+# on the basketball court.
+# main.rb is the main controller of these codes.
 require './shooting.rb'
 require './jumpball.rb'
 require './foul.rb'

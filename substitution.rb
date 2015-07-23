@@ -1,3 +1,4 @@
+# This is for substituting player.
 def substitution
   while true
     puts "Which player on?"
